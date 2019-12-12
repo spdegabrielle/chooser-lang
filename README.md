@@ -10,11 +10,12 @@ Bellingham, Matt; Holland, Simon and Mulholland, Paul (2018). Choosers: The desi
 http://oro.open.ac.uk/53946/1/Bellingham%20et%20al.%202017%20-%20Choosers%20-%20designing%20a%20highly%20expressive%20algorithmic%20music%20composition%20system%20for%20non-programmers.pdf
 
 
-
+```
 ;; sample : sample-file-path -> audio
 ;; e.g. (sample "melody1.wav")
 
 ;; sequence : sample ...+ ; -> audio
+
 (sequence (sample "melody1.wav") (sample "melody2.wav") (sample "melody1.wav"))
 
 (define m1 (sample "melody1.wav"))
@@ -25,4 +26,4 @@ http://oro.open.ac.uk/53946/1/Bellingham%20et%20al.%202017%20-%20Choosers%20-%20
 ;; chooser : number-of-lanes-to-play lane ...+ ; -> audio 
 (chooser 2 m1 m2 m3)
 
-
+```
