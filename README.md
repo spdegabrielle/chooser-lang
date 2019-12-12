@@ -17,4 +17,12 @@ http://oro.open.ac.uk/53946/1/Bellingham%20et%20al.%202017%20-%20Choosers%20-%20
 ;; sequence : sample ...+ ; -> audio
 (sequence (sample "melody1.wav") (sample "melody2.wav") (sample "melody1.wav"))
 
-;; chooser : 
+(define m1 (sample "melody1.wav"))
+(define m2 (sample "melody2.wav"))
+(define m3 (sequence m1 m2 m1))
+
+
+;; chooser : number-of-lanes-to-play lane ...+ ; -> audio 
+(chooser 2 m1 m2 m3)
+
+
