@@ -24,12 +24,16 @@ http://oro.open.ac.uk/53946/1/Bellingham%20et%20al.%202017%20-%20Choosers%20-%20
 (lane sample weight status)
 
 ;; soundable-chooser : number-of-lanes-to-play lane ...+  ; -> audio 
+;; number-of-lanes-to-play ; natural-number
 ;; lane : sample weight status 
+;; weight : (or number #t)
+;; status : (or 'once 'repeat 
 
-(soundable-chooser 2 
+(define melody
+ (soundable-chooser 2 
   (m1  1   #t)
   (m2  1   #t)
-  (m3  1   #t))
+  (m3  1   #t)))
   
 
 
